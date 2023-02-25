@@ -37,19 +37,10 @@ public:
             temp = temp->next;
         }
     
-            
-        if(temp->next->next == NULL)
-        {
-            temp1 = temp->next;
-            temp->next = NULL;
-            delete temp1;
-        }
-        else
-        {
-            temp1 = temp->next;
-            temp->next = temp1->next;
-            delete temp1;
-        }
+        temp1 = temp->next;
+        temp->next = temp1->next;
+        delete temp1;
+        
         return head;
     }
 };
