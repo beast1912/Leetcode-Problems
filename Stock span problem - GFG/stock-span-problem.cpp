@@ -35,12 +35,12 @@ class Solution
             }
             s.push({price[i],i});
        }
-       vector<int>ans;
+       
        for(int i = 0; i<n;i++)
        {
-           ans.push_back(i-indices[i]);
+           indices[i] = i-indices[i];
        }
-       return ans;
+       return indices;
     }
 };
 
