@@ -39,14 +39,13 @@ class Solution
         // return head of reversed list
         Node*prev = NULL;
         Node*curr = head;
-        Node*next_node = head->next;
-        while(curr!=NULL)
+        Node*next_node  = head;
+        while(next_node!=NULL)
         {
+            next_node = next_node->next;
             curr->next = prev;
             prev = curr;
             curr = next_node;
-            if(next_node!=NULL)
-                next_node = next_node->next;
         }
         return prev;
     }
