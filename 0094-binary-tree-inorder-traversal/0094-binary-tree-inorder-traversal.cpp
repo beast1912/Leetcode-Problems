@@ -12,11 +12,9 @@
 class Solution {
 public:
     vector<int> inorderTraversal(TreeNode* root) {
-        if(root == NULL)
-            return {};
         vector<int>inorder;
         stack<TreeNode*> st;
-        TreeNode*node = root;
+        TreeNode* node = root;
         while(true)
         {
             if(node!=NULL)
