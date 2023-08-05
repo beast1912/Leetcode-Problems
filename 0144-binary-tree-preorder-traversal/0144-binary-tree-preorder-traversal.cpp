@@ -19,13 +19,15 @@ public:
         st.push(root);
         while(!st.empty())
         {
-            TreeNode* temp = st.top();
+            TreeNode*temp = st.top();
+            ans.push_back(temp->val);
             st.pop();
             if(temp->right!=NULL)
                 st.push(temp->right);
             if(temp->left!=NULL)
                 st.push(temp->left);
-            ans.push_back(temp->val);
+            
+            
         }
         return ans;
     }
